@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://meshes/grappling_gun.glb" type="PackedScene" id=1]
+[ext_resource path="res://meshes/GunBodyMaterial.material" type="Material" id=2]
+[ext_resource path="res://meshes/BarrelMaterial.material" type="Material" id=3]
+[ext_resource path="res://scripts/weapons/GrapplePistol.cs" type="Script" id=4]
+
+[node name="GrapplePistol" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="grappling_gun" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54525e-05, -1.49012e-08, 0.000344954 )
+
+[node name="gun" parent="grappling_gun" index="0"]
+transform = Transform( 0.0510381, 0, 0, 0, 0.0510381, 0, 0, 0, 0.0510381, -0.000899017, -0.000754714, 0.00234579 )
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 2 )
+
+[node name="Hook_Mount_Point" type="Spatial" parent="."]
+transform = Transform( 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, 0.0214423, 0.134773 )
+__meta__ = {
+"_editor_description_": "Mount point for the grapple hook used when the weapon reloads."
+}
+
+[editable path="grappling_gun"]

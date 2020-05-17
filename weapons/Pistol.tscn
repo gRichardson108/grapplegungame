@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/weapons/Pistol.cs" type="Script" id=1]
+[ext_resource path="res://meshes/pistol.glb" type="PackedScene" id=2]
+
+[node name="Pistol" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0.0342731 )
+script = ExtResource( 1 )

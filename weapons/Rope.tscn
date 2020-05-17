@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/weapons/Rope.cs" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.537255, 0.364706, 0.0901961, 1 )
+
+[node name="Rope" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
+material_override = SubResource( 1 )
+cast_shadow = 0
